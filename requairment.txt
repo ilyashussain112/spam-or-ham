@@ -2,3 +2,5 @@ pandas
 tensorflow
 keras 
 joblib
+Flask
+scikit-learn
