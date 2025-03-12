@@ -2,15 +2,16 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY requairment.txt .
+COPY requirements.txt .
 
-RUN pip install --upgrade pip
+# RUN apt-get update && apt-get install -y git pkg-config default-mysql-client libmariadb-dev gcc python3-dev
 
-RUN pip install -r requairment.txt
-
+RUN pip install --no-cache-dir -r requirements.txt
+COPY models /app/models
 COPY . .
 
 EXPOSE 5000
 
+ENV PYTHONUNBUFFERED=1
 
-CMD [ "python", "app.py" ]
+CMD ["python", "app.py"]

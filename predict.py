@@ -2,8 +2,8 @@ import joblib as j
 import pandas as pd
 
 
-model = j.load("models\ham-or-spam.pkl")
-tfidf = j.load("models\\tfidf.pkl")
+model = j.load("models/ham-or-spam.pkl")
+tfidf = j.load("models/tfidf.pkl")
 
 def prediction(data, model=model, tfidf=tfidf):
     if (data, str):  
