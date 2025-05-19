@@ -4,3 +4,4 @@ tensorflow
 joblib
 Flask
 scikit-learn
+gradio

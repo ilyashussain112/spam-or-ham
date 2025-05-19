@@ -2,7 +2,11 @@ import joblib as j
 import pandas as pd
 
 
+<<<<<<< HEAD
 model = j.load("models/ham-or-spam.pkl")
+=======
+model = j.load("models/ham-or-spam_model.pkl")
+>>>>>>> 78855f8 (Add application File)
 tfidf = j.load("models/tfidf.pkl")
 
 def prediction(data, model=model, tfidf=tfidf):
